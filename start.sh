@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PYTHON=$(which python3)
+SRC_DIR="src/"
 MAIN="main.py"
 
 # ------------------------- start code -----------------------------------
@@ -10,5 +11,9 @@ if [[ "$PYTHON" == "" ]]; then
     exit 1
 fi
 
-$PYTHON $MAIN
+{
+    cd "$SRC_DIR" || exit 1
+
+    $PYTHON $MAIN
+}
 

@@ -1,9 +1,14 @@
+"""
+Main module of application
+"""
 import huffman
 
 
 def main():
-
-    huffman.initialize_huffman("w_us_constitution.txt")
+    """
+Main routine of python application.
+    """
+    huffman.initialize_huffman("weight_files/w_us_constitution.txt")
 
     test_string = "Just a simple test."
 
@@ -17,7 +22,7 @@ def main():
     print()
 
     # Just letter A
-    #print("To chars [%s]" % huffman.binary_string_to_chars("1000001"))
+    # print("To chars [%s]" % huffman.binary_string_to_chars("1000001"))
 
     print("To chars [%s]" % huffman.binary_string_to_chars(encoded))
 
@@ -28,14 +33,6 @@ def main():
     print("expected %s" % test_string)
     print()
 
-    longer_test_string = "Huffman Coding is a technique of compressing data to reduce its size without losing any of the details. It was first developed by David Huffman. Huffman Coding is generally useful to compress the data in which there are frequently occurring characters."
-    encoded = huffman.huffman_encode(longer_test_string)
-    print()
-    print(" encoded %s" % encoded)
-    #print("expected %s" % expected)
-    print()
-
 
 if __name__ == '__main__':
     main()
-

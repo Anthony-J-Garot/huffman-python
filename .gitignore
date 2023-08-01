@@ -1,7 +1,11 @@
+# Artifacts I want to keep around that never go up to the repo
 _archive/
 
+# Python cache directories
 __pycache__/
 
+# Pycharm artifacts
+.idea/
+
+# VIM swap files
 *.swp
-
-
